@@ -1,36 +1,41 @@
 package com.thanmayee;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name = "aliens")
 public class Alien {
-  private int id;
-  private String name;
-  private String colour;
+	private Integer id;
+	private String name;
+	private String colour;
 
-  public int getId() {
-    return id;
-  }
+	@Id
+	public Integer getId() {
+		return id;
+	}
 
-  public void setId(int id) {
-    this.id = id;
-  }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-  public String getName() {
-    return name;
-  }
+	public String getName() {
+		return name;
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-  public String getColour() {
-    return colour;
-  }
+	public String getColour() {
+		return colour;
+	}
 
-  public void setColour(String colour) {
-    this.colour = colour;
-  }
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
 
-  @Override
-  public String toString() {
-    return "Alien [id=" + id + ", name=" + name + ", colour=" + colour + "]";
-  }
+	@Override
+	public String toString() {
+		return "Alien [id=" + id + ", name=" + name + ", colour=" + colour + "]";
+	}
 }
